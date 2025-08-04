@@ -20,7 +20,11 @@ The `MockWebServer` in package `th.mfu` serves the web server in our system. It 
 4. Finally, close the client socket 
 5. Study the code in `main()` and tell me What it does?
 ```
- write your through here.
+ /usr/bin/env /opt/java/11.0.14/bin/java -cp /workspaces/01-network-Khant-Wai-Lin/target/classes th.mfu.MockWebServer 
+Press any key to stop the server...
+Mock Web Server running on port 8081...
+Mock Web Server running on port 8080...
+It is pretty cool to make socket and using java. Normally we use other languages for web. I'm really excited for the upcoming lecture and lab.
 ```
 6. Run the `main()`, point the web browser to `http://localhost:8080` and `http://localhost:8081`
 It should shows a simple HTML with the word such as  `Hello, Web! on Port 8080`.
@@ -52,7 +56,12 @@ Think about the following,  modify the code to experiment it and put your though
 - What would be the benefit of running many instances?
 
 ```
-  Your thought here...
+cd /workspaces/01-network-Khant-Wai-Lin ; /usr/bin/env /opt/java/11.0.14/bin/java -cp /workspaces/01-network-Khant-Wai-Lin/target/classes th.mfu.MockWebClient 
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<html><body>Hello, Web! on Port 8080</body></html>
+Pretty cool I can accept the socket on the port.
 ```
 **Please push the code back to Github to submit this lab**
 After you push, ensure you have green checkmark on the repository.
