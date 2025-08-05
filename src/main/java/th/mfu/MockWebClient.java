@@ -17,10 +17,10 @@ public class MockWebClient {
              String request = "GET / HTTP/1.1\r\nHost: localhost\r\n\r\n";
              out.println(request);
              // Read the response from the web server and print out to console
-             System.out.println(in.readLine());
-             System.out.println(in.readLine());
-             System.out.println(in.readLine());
-             System.out.println(in.readLine());
+             String line;
+             while ((line = in.readLine()) != null && !line.isEmpty()) {
+                    System.out.println("Server Response: " + line);
+             }
              // Close the socket
              socket.close();
         } catch(Exception e){
