@@ -29,6 +29,10 @@ public class MockWebServer implements Runnable {
                 // TODO: send a response to the client
                 String response = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n"
                         + "<html><body>Hello, Web! on Port " + port + "</body></html>";
+                String line;
+                while ((line = in.readLine()) != null && !line.isEmpty()) {
+                    System.out.println("Request Line: " + line);
+                }
                 out.println(response);
                 // TODO: Close the client socket
                 clientSocket.close();
